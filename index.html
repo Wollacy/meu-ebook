@@ -5,13 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ebook - Aprenda a Programar do Zero</title>
     <link rel="stylesheet" href="estilos.css">
+    <script>
+        function startCountdown() {
+            const countdown = document.getElementById("countdown");
+            let time = 24 * 60 * 60; // 24 horas
+            setInterval(() => {
+                const hours = Math.floor(time / 3600);
+                const minutes = Math.floor((time % 3600) / 60);
+                const seconds = time % 60;
+                countdown.innerText = `${hours}h ${minutes}m ${seconds}s`;
+                time--;
+            }, 1000);
+        }
+        window.onload = startCountdown;
+    </script>
 </head>
 <body>
     <div class="container">
         <h1>📚 Aprenda a Programar do Zero com Python! 🚀</h1>
-        <p>Domine os fundamentos da programação e crie seus próprios projetos!</p>
+		<p>Domine os fundamentos da programação e crie seus próprios projetos!</p>
         
-        <a href="https://bit.ly/ProgramPython_2025" class="cta-button">🔗 Quero meu ebook agora!</a>
+        <p class="urgency"><strong>⚡ Oferta por tempo limitado! Expira em: <span id="countdown">24h</span> ⏳</strong></p>
+        
+        <img src="pythonDB.jpg" alt="Foto do Python" class="profile-pic">
+        <a href="https://bit.ly/ProgramPython_2025" class="cta-button">📥 Baixe Agora e Comece Sua Jornada!</a>
         
         <h2>O que você vai aprender?</h2>
         <ul class="benefits">
@@ -26,13 +43,17 @@
         <p>📌 Linkedin para desenvolvedores</p>
         <p>📌 Acesso a um grupo privado para suporte e networking</p>
         
-        <a href="https://bit.ly/ProgramPython_2025" class="cta-button">🔗 Quero meu ebook agora!</a>
+        <h2>📢 O que nossos alunos dizem?</h2>
+        <p>⭐ "Simplesmente incrível! Aprendi do zero e agora já consigo criar meus próprios programas!"</p>
+        <p>⭐ "Muito didático e direto ao ponto. Recomendo!"</p>
+        
+        <a href="https://bit.ly/ProgramPython_2025" class="cta-button">📥 Baixe Agora e Comece Sua Jornada!</a>
 
         <div class="about-me">
             <h2>👨‍💻 Sobre mim</h2>
             <div class="about-content">
                 <img src="imagem.jpeg" alt="Foto de Wollacy Willyan" class="profile-pic">
-                <p>Olá! Meu nome é Wollacy Willyan de Carvalho, sou programador desde 2018 e atualmente atuo como desenvolvedor full-stack. Tenho experiência em backend, frontend e análise de sistemas, sempre buscando soluções eficientes e práticas. Sou apaixonado por tecnologia, leitura e compartilhar conhecimento. Meu objetivo com este ebook é tornar a programação acessível para todos, ajudando iniciantes a darem os primeiros passos com confiança!</p>
+                <p>Olá! Meu nome é Wollacy Willyan de Carvalho, sou programador desde 2018 e atualmente atuo como desenvolvedor full-stack. Tenho experiência em backend, frontend e análise de sistemas, sempre buscando soluções eficientes e práticas. Meu objetivo com este ebook é tornar a programação acessível para todos!</p>
             </div>
         </div>
 
