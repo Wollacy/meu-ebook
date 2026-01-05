@@ -29,7 +29,7 @@ Para mais informações ou dúvidas, entre em contato:
 - **Nome**: Wollacy Willyan de Carvalho
 - **E-mail**: [E-mail](mailto:carvalho_1990@outlook.com)
 - **LinkedIn**: [Linkedin](https://www.linkedin.com/in/wollacycarvalho/)
-- **Instagram**: [Instagram](https://www.instagram.com/wollacywcarvalho/)
-- **Instagram devzinho**: [Instagram](https://www.instagram.com/devzinho25/)
+- **Instagram**: [Wollacy](https://www.instagram.com/wollacywcarvalho/)
+- **Instagram devzinho**: [Devzinho](https://www.instagram.com/devzinho25/)
 
 Agradecemos por seu interesse no "Meu Ebook"! Esperamos que este material seja útil em sua jornada de aprendizado em programação.
