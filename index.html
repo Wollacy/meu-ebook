@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <meta name="facebook-domain-verification" content="hk91nit23hj8cd5p798zwee92vmdku" />
-
+    
     <title>Ebook - Aprenda a Programar do Zero com Python</title>
 
     <script>
@@ -24,106 +23,73 @@
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=347478441443736&ev=PageView&noscript=1"
     /></noscript>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            text-align: center;
-        }
-        .header {
-            background-color: #007bff;
-            color: white;
-            padding: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-        .cta-button {
-            display: inline-block;
-            background-color: #28a745;
-            color: white;
-            padding: 15px 30px;
-            font-size: 1.2em;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-        .cta-button:hover {
-            background-color: #218838;
-        }
-        .features {
-            text-align: left;
-            margin-top: 20px;
-        }
-        .features ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .features li {
-            padding: 10px 0;
-            border-bottom: 1px solid #ddd;
-        }
-        .about-me {
-            margin-top: 30px;
-            padding: 20px;
-            background-color: #e9ecef;
-            border-radius: 10px;
-            text-align: left;
-        }
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-        .profile-pic {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #007bff;
-        }
-        @media (max-width: 600px) {
-            .about-content {
-                flex-direction: column;
-                text-align: center;
+    <link rel="stylesheet" href="estilos.css">
+    
+    <script>
+        function startCountdown() {
+            const countdownElement = document.getElementById("countdown");
+            const duration = 24 * 60 * 60 * 1000; 
+            let endTime = localStorage.getItem("ebook_countdown_end");
+
+            if (!endTime) {
+                endTime = new Date().getTime() + duration;
+                localStorage.setItem("ebook_countdown_end", endTime);
             }
+
+            const timer = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = endTime - now;
+
+                if (distance < 0) {
+                    clearInterval(timer);
+                    localStorage.removeItem("ebook_countdown_end");
+                    countdownElement.innerHTML = "OFERTA EXPIRADA";
+                    return;
+                }
+
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                countdownElement.innerHTML = `${hours}h ${minutes}m ${seconds}s`;
+            }, 1000);
         }
-    </style>
+        window.onload = startCountdown;
+    </script>
 </head>
 <body>
-
-    <div class="header">
-        <h1>🚀 Domine Python do Zero!</h1>
-        <p>Aprenda a linguagem mais usada do mundo de forma prática e rápida.</p>
-    </div>
-
     <div class="container">
-        <h2>O Guia Definitivo para Iniciantes</h2>
-        <p>Você quer aprender a programar, mas não sabe por onde começar? Este e-book foi criado especialmente para você!</p>
+        <h1>📚 Aprenda a Programar do Zero com Python! 🚀</h1>
+		<p>Domine os fundamentos da programação e crie seus próprios projetos!</p>
         
-        <img src="capa-ebook.png" alt="Capa do Ebook Python" style="max-width: 100%; border-radius: 10px; margin: 20px 0;">
-
-        <div class="features">
-            <h3>📌 O que você vai aprender:</h3>
-            <ul>
-                <li>✅ Lógica de programação descomplicada</li>
-                <li>✅ Estruturas de dados essenciais</li>
-                <li>✅ Automação de tarefas do dia a dia</li>
-                <li>✅ Criação de scripts poderosos</li>
-                <li>✅ Exercícios práticos com correção</li>
-            </ul>
+        <p class="urgency"><strong>⚡ Oferta por tempo limitado! Expira em: <span id="countdown">Carregando...</span> ⏳</strong></p>
+        
+        <div class="video-container" style="margin: 20px 0; text-align: center;">
+            <video width="100%" max-width="600px" controls poster="pythonDB.png" style="border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                <source src="video.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos.
+            </video>
         </div>
 
-        <div style="background-color: #fff3cd; padding: 15px; margin-top: 20px; border-radius: 10px;">
+        <div style="text-align: center; margin: 20px 0;">
+            <a href="https://sun.eduzz.com/69KAXYQA0O" class="cta-button">📥 Baixe Agora e Comece Sua Jornada!</a>
+            <p style="font-size: 0.8rem; color: #666; margin-top: 10px;">🔒 Compra 100% Segura via Eduzz</p>
+        </div>
+ 
+        <h2>O que você vai aprender?</h2>
+        <ul class="benefits">
+            <li>✅ Lógica de programação do básico ao avançado</li>
+            <li>✅ Uso prático da linguagem Python</li>
+            <li>✅ Banco de Dados reais (não apenas teoria)</li>
+            <li>✅ Versionamento e colaboração com GitHub</li>
+            <li>✅ Preparação para o mercado e carreira</li>
+        </ul>
+        
+        <h2>🔥 Bônus Exclusivo!</h2>
+        <p>📌 Linkedin para desenvolvedores</p>
+        <p>📌 Acesso a um grupo privado para suporte e networking</p>
+        
+        <div style="text-align: center; margin: 30px 0; border: 1px dashed #ccc; padding: 20px; border-radius: 10px;">
             <h3>🛡️ Garantia Incondicional</h3>
             <p>Você tem <strong>7 dias</strong> para testar o conteúdo. Se não gostar, devolvemos 100% do seu dinheiro!</p>
             <a href="https://sun.eduzz.com/69KAXYQA0O" class="cta-button">🚀 QUERO MEU E-BOOK AGORA!</a>
@@ -149,8 +115,9 @@
             </div>
         </div>
 
-        <p style="margin-top: 30px; font-size: 0.9em; color: #666;">© 2026 Wollacy Willyan - Todos os direitos reservados.</p>
+        <div class="footer">
+            <p>&copy; 2026 - Todos os direitos reservados.</p>
+        </div>
     </div>
-
 </body>
 </html>
