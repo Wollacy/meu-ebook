@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="facebook-domain-verification" content="hk91nit23hj8cd5p798zwee92vmdku" />
-    
+    <meta name="description" content="Aprenda a programar do zero com Python: lógica de programação, banco de dados, GitHub e preparação para o mercado de trabalho.">
+
     <title>Ebook - Aprenda a Programar do Zero com Python</title>
 
+    <!-- Facebook Pixel Code (mantido intacto) -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -16,15 +18,17 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    
+
     fbq('init', '347478441443736'); 
     fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=347478441443736&ev=PageView&noscript=1"
     /></noscript>
+    <!-- Fim Facebook Pixel Code -->
+
     <link rel="stylesheet" href="estilos.css">
-    
+
     <script>
         function startCountdown() {
             const countdownElement = document.getElementById("countdown");
@@ -58,66 +62,98 @@
     </script>
 </head>
 <body>
-    <div class="container">
-        <h1>📚 Aprenda a Programar do Zero com Python! 🚀</h1>
-		<p>Domine os fundamentos da programação e crie seus próprios projetos!</p>
-        
-        <p class="urgency"><strong>⚡ Oferta por tempo limitado! Expira em: <span id="countdown">Carregando...</span> ⏳</strong></p>
-        
-        <div class="video-container" style="margin: 20px 0; text-align: center;">
-            <video width="100%" max-width="600px" controls poster="pythonDB.png" style="border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+
+    <header class="hero">
+        <div class="container">
+            <span class="badge">🐍 Python para Iniciantes</span>
+            <h1>Aprenda a Programar do Zero com Python!</h1>
+            <p class="subtitle">Domine os fundamentos da programação e crie seus próprios projetos, mesmo sem nenhuma experiência prévia.</p>
+
+            <div class="urgency-box">
+                <span>⚡ Oferta por tempo limitado! Expira em:</span>
+                <strong id="countdown">Carregando...</strong>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="video-section">
+            <video width="100%" controls poster="pythonDB.png" class="video-player">
                 <source src="video.mp4" type="video/mp4">
                 Seu navegador não suporta vídeos.
             </video>
-        </div>
+        </section>
 
-        <div style="text-align: center; margin: 20px 0;">
-            <a href="https://sun.eduzz.com/69KAXYQA0O" class="cta-button">📥 Baixe Agora e Comece Sua Jornada!</a>
-            <p style="font-size: 0.8rem; color: #666; margin-top: 10px;">🔒 Compra 100% Segura via Eduzz</p>
-        </div>
- 
-        <h2>O que você vai aprender?</h2>
-        <ul class="benefits">
-            <li>✅ Lógica de programação do básico ao avançado</li>
-            <li>✅ Uso prático da linguagem Python</li>
-            <li>✅ Banco de Dados reais (não apenas teoria)</li>
-            <li>✅ Versionamento e colaboração com GitHub</li>
-            <li>✅ Preparação para o mercado e carreira</li>
-        </ul>
-        
-        <h2>🔥 Bônus Exclusivo!</h2>
-        <p>📌 Linkedin para desenvolvedores</p>
-        <p>📌 Acesso a um grupo privado para suporte e networking</p>
-        
-        <div style="text-align: center; margin: 30px 0; border: 1px dashed #ccc; padding: 20px; border-radius: 10px;">
-            <h3>🛡️ Garantia Incondicional</h3>
-            <p>Você tem <strong>7 dias</strong> para testar o conteúdo. Se não gostar, devolvemos 100% do seu dinheiro!</p>
-            <a href="https://sun.eduzz.com/69KAXYQA0O" class="cta-button">🚀 QUERO MEU E-BOOK AGORA!</a>
-        </div>
+        <section class="cta-section">
+            <a href="https://sun.eduzz.com/69KAXYQA0O" class="cta-button">
+                📥 Baixe Agora e Comece Sua Jornada!
+            </a>
+            <p class="secure-note">🔒 Compra 100% Segura via Eduzz</p>
+        </section>
 
-        <div class="faq-section" style="margin-top: 40px; text-align: left;">
+        <section class="benefits-section">
+            <h2>O que você vai aprender?</h2>
+            <ul class="benefits">
+                <li>✅ Lógica de programação do básico ao avançado</li>
+                <li>✅ Uso prático da linguagem Python</li>
+                <li>✅ Banco de Dados reais (não apenas teoria)</li>
+                <li>✅ Versionamento e colaboração com GitHub</li>
+                <li>✅ Preparação para o mercado e carreira</li>
+            </ul>
+        </section>
+
+        <section class="bonus-section">
+            <h2>🔥 Bônus Exclusivo!</h2>
+            <div class="bonus-grid">
+                <div class="bonus-card">
+                    <span class="bonus-icon">💼</span>
+                    <p>LinkedIn para desenvolvedores</p>
+                </div>
+                <div class="bonus-card">
+                    <span class="bonus-icon">🤝</span>
+                    <p>Acesso a um grupo privado para suporte e networking</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="guarantee-section">
+            <div class="guarantee-box">
+                <h3>🛡️ Garantia Incondicional</h3>
+                <p>Você tem <strong>7 dias</strong> para testar o conteúdo. Se não gostar, devolvemos 100% do seu dinheiro!</p>
+                <a href="https://sun.eduzz.com/69KAXYQA0O" class="cta-button">
+                    🚀 Quero Meu E-book Agora!
+                </a>
+            </div>
+        </section>
+
+        <section class="faq-section">
             <h2>🤔 Perguntas Frequentes</h2>
-            <div style="margin-bottom: 15px;">
-                <strong>1. O conteúdo é atualizado?</strong>
+
+            <details class="faq-item">
+                <summary>O conteúdo é atualizado?</summary>
                 <p>Sim! O e-book conta com atualizações regulares para acompanhar as mudanças na tecnologia.</p>
-            </div>
-            <div style="margin-bottom: 15px;">
-                <strong>2. Preciso de conhecimento prévio?</strong>
+            </details>
+
+            <details class="faq-item">
+                <summary>Preciso de conhecimento prévio?</summary>
                 <p>Não. O material foi desenhado para quem está começando do absoluto zero.</p>
-            </div>
-        </div>
- 
-        <div class="about-me">
-            <h2>👨‍💻 Sobre o autor</h2>
+            </details>
+        </section>
+
+        <section class="about-me">
+            <h1>👨‍💻 Sobre o autor</h1>
             <div class="about-content">
                 <img src="imagem.png" alt="Foto de Wollacy Willyan" class="profile-pic">
                 <p>Olá! Meu nome é <strong>Wollacy Willyan de Carvalho</strong>, sou programador desde 2018 e meu objetivo é tornar a programação acessível para todos!</p>
             </div>
-        </div>
+        </section>
 
-        <div class="footer">
-            <p>&copy; 2026 - Todos os direitos reservados.</p>
-        </div>
-    </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 - Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 </html>

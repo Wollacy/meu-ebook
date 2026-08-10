@@ -1,64 +1,316 @@
+/* ===== RESET E BASE ===== */
+* {
+    box-sizing: border-box;
+}
+
+/* ===== VARIÁVEIS DE COR (TECH THEME) ===== */
+:root {
+    --cor-primaria: #6366f1;
+    --cor-primaria-clara: #818cf8;
+    --cor-primaria-escura: #4338ca;
+    --cor-secundaria: #06b6d4;
+    --cor-fundo-claro: #eef2ff;
+}
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center;
     background-color: #121212;
+    color: #333;
+    line-height: 1.6;
 }
+
 .container {
     max-width: 800px;
-    margin: 50px auto;
+    margin: 0 auto;
     padding: 20px;
-    background: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
 }
-h1 {
-    color: #333;
+
+/* ===== HERO / CABEÇALHO ===== */
+.hero {
+    background: linear-gradient(135deg, #0f0f1a, #1e1b3a);
+    padding: 50px 20px 40px;
+    text-align: center;
+    color: white;
 }
-p {
+
+.badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    margin: 10px 0;
+    color: white;
+}
+
+.subtitle {
     font-size: 18px;
-    color: #555;
+    color: #ccc;
+    max-width: 600px;
+    margin: 0 auto 25px;
 }
+
+.urgency-box {
+    background: var(--cor-fundo-claro);
+    border: 2px dashed var(--cor-primaria);
+    border-radius: 10px;
+    padding: 15px 20px;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 5px;
+    color: var(--cor-primaria-escura);
+    font-weight: bold;
+}
+
+.urgency-box strong {
+    font-size: 22px;
+}
+
+/* ===== SEÇÕES GERAIS (fundo branco, cartão) ===== */
+main.container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    margin-top: -20px;
+    position: relative;
+    z-index: 2;
+    padding: 30px 25px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section:last-child {
+    margin-bottom: 0;
+}
+
+h2 {
+    color: #1a1a1a;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* ===== VÍDEO ===== */
+.video-player {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: block;
+}
+
+/* ===== BOTÃO CTA ===== */
+.cta-section {
+    text-align: center;
+}
+
 .cta-button {
     display: inline-block;
-    padding: 15px 30px;
+    padding: 16px 36px;
     font-size: 20px;
+    font-weight: bold;
     color: white;
-    background: #ff6600;
+    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
     text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 .cta-button:hover {
-    background: #cc5200;
+    background: linear-gradient(135deg, var(--cor-primaria-escura), var(--cor-primaria));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(99, 102, 241, 0.5);
 }
-.benefits {
-    text-align: left;
-    margin-top: 20px;
-}
-.benefits li {
-    font-size: 18px;
-    margin: 10px 0;
-}
-.footer {
-    margin-top: 30px;
+
+.secure-note {
     font-size: 14px;
     color: #777;
+    margin-top: 10px;
 }
+
+/* ===== BENEFÍCIOS ===== */
+.benefits {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.benefits li {
+    font-size: 18px;
+    padding: 10px 15px;
+    margin: 8px 0;
+    background: #f9f9ff;
+    border-left: 4px solid var(--cor-primaria);
+    border-radius: 6px;
+}
+
+/* ===== BÔNUS ===== */
+.bonus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.bonus-card {
+    background: var(--cor-fundo-claro);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.bonus-icon {
+    font-size: 32px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.bonus-card p {
+    margin: 0;
+    font-size: 16px;
+    color: #444;
+}
+
+/* ===== GARANTIA ===== */
+.guarantee-box {
+    border: 2px dashed #ccc;
+    border-radius: 12px;
+    padding: 25px 20px;
+    text-align: center;
+    background: #fafafa;
+}
+
+.guarantee-box h3 {
+    margin-top: 0;
+    color: #1a1a1a;
+}
+
+/* ===== FAQ (acordeão nativo) ===== */
+.faq-item {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 12px 18px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.faq-item summary {
+    font-weight: bold;
+    font-size: 16px;
+    color: #1a1a1a;
+    list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::before {
+    content: "➕ ";
+    color: var(--cor-primaria);
+}
+
+.faq-item[open] summary::before {
+    content: "➖ ";
+}
+
+.faq-item p {
+    margin: 10px 0 0;
+    font-size: 15px;
+    color: #555;
+}
+
+/* ===== SOBRE O AUTOR ===== */
+.about-me {
+    display: flex;
+    flex-direction: column;   /* empilha título e conteúdo */
+    gap: 20px;
+    background: linear-gradient(135deg, #1e1b3a, #0f0f1a);
+    border-radius: 16px;
+    padding: 30px;
+    color: #f1f1f1;
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.2);
+}
+
+.about-me h1 {
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 0;
+    color: white;
+}
+
+.about-me strong {
+    color: var(--cor-primaria-clara);
+}
+
 .profile-pic {
     width: 150px;
     height: 150px;
-    border-radius: 10px;
     object-fit: cover;
-    display: block;
-    margin: 10px auto;
+    border-radius: 12px;
+    border: 3px solid var(--cor-primaria);
+    flex-shrink: 0;
 }
+
 .about-content {
     display: flex;
     align-items: center;
     gap: 20px;
 }
+
 .about-content p {
     flex: 1;
+    text-align: left;
+    margin: 0;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #999;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content p {
+        text-align: center;
+    }
+
+    .cta-button {
+        font-size: 18px;
+        padding: 14px 28px;
+    }
+
+    main.container {
+        padding: 20px 15px;
+    }
 }
