@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Guia Prático de Git e GitHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="hero-section">
+        <div class="container">
+            <span class="badge">🔥 ATENÇÃO: Material liberado gratuitamente por tempo limitado.</span>
+            
+            <h1>O Guia Prático de Git e GitHub que os Cursos de Programação <span class="highlight">Escondem de Você</span></h1>
+            
+            <p class="subheadline">Descubra o método "Laboratório Prático" para dominar os comandos de sobrevivência do Git, blindar o seu código contra erros e construir um portfólio no GitHub que atrai recrutadores. <strong>Tudo isso em menos de 30 minutos e sem teoria chata.</strong></p>
+            
+            <img src="capa.png" alt="Capa do Guia Prático de Git e GitHub" class="hero-image">
+            
+            <button class="cta-button" onclick="abrirModal()">👉 QUERO BAIXAR O GUIA GRATUITO AGORA</button>
+            <p class="security-text">🔒 Valor Oficial: R$ 9,90. <span class="highlight">Hoje: 100% Gratuito.</span></p>
+        </div>
+    </header>
+
+    <section class="pain-section">
+        <div class="container">
+            <h2>Por que 90% dos iniciantes em programação são reprovados em entrevistas de emprego?</h2>
+            <p>A verdade que ninguém te conta é que saber lógica de programação ou decorar códigos em Python <strong>não é suficiente para conseguir uma vaga</strong>. No dia a dia de uma empresa de tecnologia, ninguém trabalha sozinho e ninguém envia código por anexo no e-mail.</p>
+            <p>Se você chegar em um teste técnico e não souber criar uma <em>branch</em>, fazer um <em>commit</em> correto ou dar um <em>push</em> para o GitHub, você será descartado na hora.</p>
+            <p>Se você já tentou aprender Git por tutoriais chatos e achou que isso era coisa de gênio, este Guia foi feito para você.</p>
+        </div>
+    </section>
+
+    <section class="benefits-section">
+        <div class="container">
+            <h2>O que você vai dominar neste Laboratório Prático:</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>🚀 O Seu Primeiro Cofre</h3>
+                    <p>Aprenda o fluxo diário de um Dev Sênior (init, add e commit) usando um arquivo ridiculamente simples.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>⏳ A Máquina do Tempo</h3>
+                    <p>Fez besteira? Apagou o código? Descubra o comando mágico para voltar no tempo e salvar o seu projeto.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>☁️ A Vitrine nas Nuvens</h3>
+                    <p>O passo a passo sem enrolação para empurrar o seu código para as nuvens e atrair recrutadores.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>🔥 Bônus: Cheat Sheet</h3>
+                    <p>Um guia de bolso com os principais comandos salva-vidas para imprimir e colar do lado do monitor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta-section">
+        <div class="container">
+            <h2>Pare de deixar o seu GitHub pegando poeira.</h2>
+            <p>O acesso gratuito a este material pode sair do ar a qualquer momento. Não perca a oportunidade!</p>
+            <button class="cta-button" onclick="abrirModal()">👉 QUERO BAIXAR O MEU GUIA GRATUITO</button>
+        </div>
+    </section>
+
+    <div id="leadModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="fecharModal()">&times;</span>
+            <h3>Falta pouco!</h3>
+            <p>Para onde devemos enviar o seu Guia Prático Gratuito?</p>
+            
+            <form id="leadForm">
+                <input type="text" id="nome" placeholder="Seu Primeiro Nome" required>
+                <input type="email" id="email" placeholder="Seu Melhor E-mail" required>
+                <input type="tel" id="whatsapp" placeholder="Seu WhatsApp (com DDD)" required>
+                <button type="submit" class="submit-button">RECEBER MEU E-BOOK AGORA</button>
+            </form>
+            <p class="privacy-text">🔒 Prometemos não enviar spam.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
