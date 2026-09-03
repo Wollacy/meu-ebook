@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="facebook-domain-verification" content="hk91nit23hj8cd5p798zwee92vmdku" />
     <meta name="description" content="Aprenda a programar do zero com Python: lógica de programação, banco de dados, GitHub e preparação para o mercado de trabalho.">
+    <meta name="theme-color" content="#10B981">
 
     <title>Ebook - Aprenda a Programar do Zero com Python</title>
 
-    <!-- Facebook Pixel Code (mantido intacto) -->
+    <link rel="preconnect" href="https://connect.facebook.net">
+    <link rel="stylesheet" href="estilos.css">
+
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -18,48 +21,12 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-
     fbq('init', '347478441443736'); 
     fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=347478441443736&ev=PageView&noscript=1"
     /></noscript>
-    <!-- Fim Facebook Pixel Code -->
-
-    <link rel="stylesheet" href="estilos.css">
-
-    <script>
-        function startCountdown() {
-            const countdownElement = document.getElementById("countdown");
-            const duration = 24 * 60 * 60 * 1000; 
-            let endTime = localStorage.getItem("ebook_countdown_end");
-
-            if (!endTime) {
-                endTime = new Date().getTime() + duration;
-                localStorage.setItem("ebook_countdown_end", endTime);
-            }
-
-            const timer = setInterval(() => {
-                const now = new Date().getTime();
-                const distance = endTime - now;
-
-                if (distance < 0) {
-                    clearInterval(timer);
-                    localStorage.removeItem("ebook_countdown_end");
-                    countdownElement.innerHTML = "OFERTA EXPIRADA";
-                    return;
-                }
-
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                countdownElement.innerHTML = `${hours}h ${minutes}m ${seconds}s`;
-            }, 1000);
-        }
-        window.onload = startCountdown;
-    </script>
 </head>
 <body>
 
@@ -79,7 +46,7 @@
     <main class="container">
 
         <section class="video-section">
-            <video width="100%" controls poster="pythonDB.png" class="video-player">
+            <video width="100%" controls preload="none" poster="pythonDB.webp" class="video-player">
                 <source src="video.mp4" type="video/mp4">
                 Seu navegador não suporta vídeos.
             </video>
@@ -129,12 +96,10 @@
 
         <section class="faq-section">
             <h2>🤔 Perguntas Frequentes</h2>
-
             <details class="faq-item">
                 <summary>O conteúdo é atualizado?</summary>
                 <p>Sim! O e-book conta com atualizações regulares para acompanhar as mudanças na tecnologia.</p>
             </details>
-
             <details class="faq-item">
                 <summary>Preciso de conhecimento prévio?</summary>
                 <p>Não. O material foi desenhado para quem está começando do absoluto zero.</p>
@@ -144,7 +109,7 @@
         <section class="about-me">
             <h1>👨‍💻 Sobre o autor</h1>
             <div class="about-content">
-                <img src="imagem.png" alt="Foto de Wollacy Willyan" class="profile-pic">
+                <img src="imagem.webp" alt="Foto de Wollacy Willyan" class="profile-pic" loading="lazy">
                 <p>Olá! Meu nome é <strong>Wollacy Willyan de Carvalho</strong>, sou programador desde 2018 e meu objetivo é tornar a programação acessível para todos!</p>
             </div>
         </section>
@@ -155,5 +120,36 @@
         <p>&copy; 2026 - Todos os direitos reservados.</p>
     </footer>
 
+    <script>
+        function startCountdown() {
+            const countdownElement = document.getElementById("countdown");
+            const duration = 24 * 60 * 60 * 1000; 
+            let endTime = localStorage.getItem("ebook_countdown_end");
+
+            if (!endTime) {
+                endTime = new Date().getTime() + duration;
+                localStorage.setItem("ebook_countdown_end", endTime);
+            }
+
+            const timer = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = endTime - now;
+
+                if (distance < 0) {
+                    clearInterval(timer);
+                    localStorage.removeItem("ebook_countdown_end");
+                    countdownElement.innerHTML = "OFERTA EXPIRADA";
+                    return;
+                }
+
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                countdownElement.innerHTML = `${hours}h ${minutes}m ${seconds}s`;
+            }, 1000);
+        }
+        startCountdown();
+    </script>
 </body>
 </html>
